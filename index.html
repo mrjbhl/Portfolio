@@ -13,29 +13,47 @@
 
 <body class="body-index">
 
-    <header>
-        <div class="navbar">
-          <div class="containers flex">
-            <a href="index.html">
-            <img src="" class="logo" alt="" /></a>
-            <nav>
-              <ul>
-                <li><a href="">Portefolie</a></li>
-                <li><a href="">Bag Rattet - Del 1</a></li>
-                <li><a href="">Bag Rattet - Del 2</a></li>
-                <li><a href="">Video - Portræt</a></li>
-                <li><a href="">Spil - GameMaker Studio 2</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
+    <header class="nav-z">
     </header>
+
+    <nav>
+      <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <!-- Top Navigation Menu -->
+      <div class="topnav">
+        <a href="#home" class="active">Logo</a>
+      <!-- Navigation links (hidden by default) -->
+      <div id="myLinks">
+        <a href="./index.html">Portefolie</a>
+        <a href="./bagrat-et.html">Bag Rattet - Del 1</a>
+        <a href="./bagrat-to.html">Bag Rattet - Del 2</a>
+        <a href="./video.html">Video - Portræt</a>
+        <a href="./spil.html">Spil - GameMaker Studio 2</a>
+      </div>
+      <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+      </div>
+    </nav>
 
     <main class="main-index">
     </main>
 
     <footer>
     </footer>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+      </script>
 
 </body>
 </html>
