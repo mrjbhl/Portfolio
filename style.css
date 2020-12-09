@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap');
 
 :root{
-    --primary: #d0d1d3;
-    --secondary:#9e9199;
-    --tertiary: #425d70;
-    --quaternary:#5e7783; 
-    --quinary: #664758;
+    --primary: #323436;
+    --secondary:#c8dcf0;
+    --tertiary: #251c1c;
+    --quaternary:#6d7175; 
+    --quinary: #ced6de;
 }
 
 /* Overordnet Starter her */
@@ -13,7 +13,7 @@
 
 
 .body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', Sans-serif;
     font-weight: 400;
     font-size: 15px;
     color: #000;
@@ -23,11 +23,12 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: var(--quaternary);
+    background-color: var(--secondary);
 }
 
 h1, h2, h3 {
-    padding-left: 3rem;
+    align-self: center;
+    padding-left: 5%;
     padding-right: 3rem;
     color: var(--primary);
   }
@@ -38,13 +39,28 @@ h1, h2, h3 {
 
 /* Video */
 
+video {
+  width: 100%;
+  height: auto;
+}
+
+.index-video {
+  padding-top: 0;
+  margin-top: 0;
+}
+
 /* Container */
+
+.index-main-container {
+  display: block;
+  justify-content: center;
+  columns: 1;
+  
+  }
 
 /* Logo */
 
 /* Text Boxes */
-
-/* Container */
 
 /* Footer */
 
@@ -66,7 +82,7 @@ h1, h2, h3 {
   left: 0;
   z-index: 9999;
   width: 100%;
-  background-color: var(--tertiary);
+  background-color: rgb(37,28,28, 0.88);
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -86,7 +102,7 @@ a.active {
 
 .nav-a a {
   float: center;
-  color: var(--primary); 
+  color: var(--secondary); 
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -95,9 +111,9 @@ a.active {
   
 }
 
-/* Add a grey background color on mouse-over */
+/* Add background color on mouse-over */
 .nav-a a:hover {
-  background-color: var(--tertiary);
+  background-color: var(--secondary);
   color: var(--primary);
 }
 
@@ -157,4 +173,34 @@ float: left;
 }
 .menu-btn.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/* animate index text */
+
+.index-ani, .index-ani2 {
+  display: block;
+  position: relative;
+  animation-name: left2right;
+  animation-duration: 2s;
+}
+
+@keyframes left2right {
+  0%   {left:-2000px;}
+  100% {left:0px;}
+}
+
+
+/* media querries */
+
+
+@media screen and (min-width: 1000px) {
+
+  .index-main-container {
+    display: flex;
+    justify-content: center;
+    columns: 2;
+    /*column-width: 50%;
+    column-gap: 10%;*/
+    column-gap: 10%;
+  }
 }
