@@ -3,7 +3,7 @@
 :root{
     --primary: #323436;
     --secondary:#c8dcf0;
-    --tertiary: #251c1c;
+    --tertiary: #045380e8;
     --quaternary:#6d7175; 
     --quinary: #ced6de;
 }
@@ -34,10 +34,14 @@ h1, h2, h3 {
   }
 
 .header {
-  margin-top: 110px;
 }
 
-/* Video */
+/* Video and images */
+
+.index-img {
+  width: 100%;
+  height: auto;
+}
 
 video {
   width: 100%;
@@ -52,24 +56,68 @@ video {
 /* Container */
 
 .index-main-container {
+  margin-top: 90px;
   display: block;
   justify-content: center;
   columns: 1;
-  
   }
 
 /* Logo */
 
 /* Text Boxes */
 
+.info {
+  float: left;
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+  font-size: 10px;
+  color: var(--quinary);
+}
+
 /* Footer */
 
 .footer {
     position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 2rem;
     width: 100%;
     text-align: center;
+    opacity: 0.5;
+    
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Link-in */
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
 }
 
 /* Nav Bar */
@@ -82,7 +130,7 @@ video {
   left: 0;
   z-index: 9999;
   width: 100%;
-  background-color: rgb(37,28,28, 0.88);
+  background-color: var(--tertiary);
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -102,7 +150,7 @@ a.active {
 
 .nav-a a {
   float: center;
-  color: var(--secondary); 
+  color: var(--quinary); 
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -185,8 +233,8 @@ float: left;
 }
 
 @keyframes left2right {
-  0%   {left:-2000px;}
-  100% {left:0px;}
+  0%   {bottom:-2000px;}
+  100% {bottom:0px;}
 }
 
 
@@ -201,6 +249,24 @@ float: left;
     columns: 2;
     /*column-width: 50%;
     column-gap: 10%;*/
-    column-gap: 10%;
+    column-gap: 5%;
   }
+
+  .body img {
+    float: left;
+    padding-top: 2.3rem;
+    padding-left: 7rem;
+    max-width: 60%;
+    max-height: auto;
+  }
+  .body cite {
+    
+    padding-left: 7rem;
+    float: left;
+  }
+
+  h1,h2,h3,h4 {
+    padding-right: 7rem;
+  }
+  h1 {margin-top: 4rem;}
 }
