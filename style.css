@@ -23,26 +23,18 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    background-color: var(--tertiary);
 }
 
-/*
-body::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 2;
-	background: rgba(0, 0, 0, 0.1);
-	box-shadow: inset 1px 1px 60px #000000, inset -1px -1px 60px #000000;
-}
-*/
+h1, h2, h3 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: var(--quinary);
+  }
 
+.header {
+  margin-top: 110px;
+}
 
 /* Video */
 
@@ -64,44 +56,17 @@ body::after {
     text-align: center;
 }
 
-/* Links */
-
-a:link {
-  color: green;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: pink;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
 /* Nav Bar */
 
-/* Nav z-index 
-.nav-z, .topnav a  {
-    z-index: 3;
-}
-*/
 /* Style the navigation menu */
 .topnav {
   overflow: hidden;
-  background-color: #333;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: rgb(0,56,82, 0.75)
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -110,48 +75,57 @@ a:active {
 }
 
 /* Style navigation menu links */
-.topnav a {
-  color: white;
+
+.nav-a {
+margin-top: 90px;
+}
+
+a.active {
+  font-style: italic;
+}
+
+.nav-a a {
+  float: center;
+  color: var(--primary); 
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
   display: block;
+  text-align: center;
+  
 }
 
 /* Add a grey background color on mouse-over */
-.topnav a:hover {
+.nav-a a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Style the active link (or home/logo) */
-.active {
-  background-color: #4CAF50;
-  color: white;
-}
 /* logo menu */
 .logo-menu {
+padding: 10px;
 width: 80px;
 height: 80px;
+float: left;
 }
 
 /* Animated Menu*/
 
 .menu-btn {
+  padding-top: 2rem;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 80px;
+  float: right;
+  top: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
   transition: all .5s ease-in-out;
-  /* border: 3px solid #fff; */
 }
 .menu-btn__burger {
   width: 50px;
   height: 6px;
-  background: #fff;
+  background: rgb(255, 255, 255);
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255,101,47,.2);
   transition: all .5s ease-in-out;
@@ -159,10 +133,10 @@ height: 80px;
 .menu-btn__burger::before,
 .menu-btn__burger::after {
   content: '';
-  position: absolute;
+  position: fixed;
   width: 50px;
   height: 6px;
-  background: #fff;
+  background: rgb(255, 255, 255);
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255,101,47,.2);
   transition: all .5s ease-in-out;

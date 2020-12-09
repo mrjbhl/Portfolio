@@ -6,6 +6,10 @@ menuBtn.addEventListener('click', () => {
     menuBtn.classList.add('open');
     menuOpen = true;
     x.style.display = "block";
+    /*
+    x.style.justifyContent = center;
+    x.style.alignItems = center;
+    */
   } else {
     menuBtn.classList.remove('open');
     menuOpen = false;
