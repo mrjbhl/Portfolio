@@ -74,8 +74,6 @@ video {
   columns: 1;
   }
 
-/* Logo */
-
 /* Text Boxes */
 
 .info {
@@ -147,7 +145,7 @@ video {
   background-color: var(--tertiary);
 }
 
-/* Hide the links inside the navigation menu (except for logo/home) */
+/* Hide the links inside the navigation menu */
 .topnav #myLinks {
   display: none;
 }
@@ -180,6 +178,7 @@ a.active {
 }
 
 /* logo menu */
+
 .logo-menu {
 padding: 15px;
 width: 65px;
@@ -291,7 +290,15 @@ float: left;
     max-height: auto;
   }
 
-  .dans-img, .rat1-img, .rat2-img {
+  .dans-img, .rat1-img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+  }
+  .rat2-img {
     margin: 0;
     padding: 0;
     display: block;
