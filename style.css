@@ -10,8 +10,6 @@
 
 /* Overordnet Starter her */
 
-
-
 .body {
     font-family: 'Playfair Display', Sans-serif;
     font-weight: 400;
@@ -31,12 +29,13 @@
 .space2 {
     margin-bottom: 150px;}
 
-h1, h2, h3, cite {
+h1, h2, h3, cite, p {
     align-self: center;
     padding-left: 10%;
     padding-right: 10%;
     color: var(--primary);
   }
+  
 
 /* Video and images */
 
@@ -248,45 +247,53 @@ float: left;
 
 
 /* media querries */
-
+@media screen and (min-width: 550px) and (max-width: 1000px) {
+  .body-que img {
+    max-width: 50%;
+    padding-top: 3rem;
+    padding-left: 15%;}
+}
+  cite {padding-left: 15%;
+        padding-top: 0.5rem;     
+  }
 
 @media screen and (min-width: 1000px) {
   .main-container {
-    display: flex;
-    justify-content: center;
-    columns: 2;
-    /*column-width: 50%;
-    column-gap: 10%;*/
-  }
+      display: grid;
+      gap: 1rem;
+      grid-auto-flow: column;
+      grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
+    }
+  
 
   /*video*/
   .por-video {
     display: flex;
     justify-content: center;
     padding-top: 0;
-    margin-top: 0;
-    padding-left: 10%;
-    padding-right: 10%;
+    margin-top: 4.5rem;
+    padding-left: 15%;
+    padding-right: 0%;
     max-width: 80%;
     max-height: auto;
   }
 
   /* index */
   .body-que img {
-    float: left;
     padding-top: 4rem;
-    padding-left: 15rem;
-    max-width: 60%;
+    padding-left: 15%;
+    max-width: 70%;
     max-height: auto;
   }
   .body-que cite {
     
-    padding-left: 15rem;
-    float: left;
+    padding-left: 15%;
   }
 
-  .body-que h1,h2,h3,h4 {
-    padding-right: 15rem;
+  .body-que h1,h2,h3,h4, p {
+    padding-right: 5%;
+    padding-left: 10%;
+    margin-top: 1rem;;
   }
   .body-que h1 {margin-top: 4rem;
   }
