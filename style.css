@@ -2,7 +2,7 @@
 
 :root{
     --primary: #323436;
-    --secondary:#c8dcf0;
+    --secondary:#9fbddb;
     --tertiary: #045380e8;
     --quaternary:#6d7175; 
     --quinary: #ced6de;
@@ -35,6 +35,10 @@ h1, h2, h3, cite, p {
     padding-right: 10%;
     color: var(--primary);
   }
+
+.p2 {
+  color: var(--quaternary)
+}
   
 
 /* Video and images */
@@ -85,12 +89,14 @@ video {
 /* Footer */
 
 .footer {
+    word-spacing: 3rem;
     position: fixed;
-    left: 0;
-    bottom: 2rem;
+    bottom: 1rem;
     width: 100%;
     text-align: center;
     opacity: 0.5;
+    padding-left: 1rem;
+    padding-right: 1rem;
     
 }
 
@@ -268,33 +274,54 @@ float: left;
 
   /*video*/
   .por-video {
-    display: flex;
-    justify-content: center;
+    display: row;
     padding-top: 0;
     margin-top: 4.5rem;
-    padding-left: 15%;
-    padding-right: 0%;
-    max-width: 80%;
-    max-height: auto;
+    padding-left: 30%;
+    padding-right: 10%;
+    margin-right: 2rem;
+    max-width: 70%;
   }
 
   /* index */
   .body-que img {
     padding-top: 4rem;
-    padding-left: 15%;
+    padding-left: 35%;
     max-width: 70%;
     max-height: auto;
   }
+
+  .dans-img, .rat1-img, .rat2-img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
   .body-que cite {
     
     padding-left: 15%;
   }
 
   .body-que h1,h2,h3,h4, p {
-    padding-right: 5%;
-    padding-left: 10%;
+    padding-right: 20%;
+    padding-left: 25%;
     margin-top: 1rem;;
   }
   .body-que h1 {margin-top: 4rem;
+  }
+
+  .altext h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; 
+    text-align: center;
   }
 }
